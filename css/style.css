@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+
+}
+body{
+
+}
+section{
+    display:flex;
+    height:100vh;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    background-color:#004098;
+}
+a{
+    
+    color: #fff;
+    background: #05295a;
+    padding: 25px 55px;
+    display: inline-block;
+    font-size: 22px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    position:relative;
+    overflow:hidden;
+}
+a::after{
+    content: "";
+    position: absolute;
+    background: #0e4ca0;
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 0;
+}
+a b {
+    position:relative;
+    z-index: 1;
+}
+
+a span:nth-child(2){
+    position:absolute;
+    width:100%;
+    height:5px;
+    top:0;
+    left:0;
+    display:block;
+    background: rgb(25,122,255);
+    background: linear-gradient(-90deg, rgba(25,122,255,1) 0%, rgba(0,64,152,1) 100%);
+    z-index:2;
+    animation:anmt1 1s linear infinite;
+    transform:translateX(-290px);
+    animation-delay:1s;
+}
+a span:nth-child(3){
+    position:absolute;
+    width:100%;
+    height:5px;
+    bottom:0;
+    left:0;
+    display:block;
+    background: rgb(25,122,255);
+    background: linear-gradient(90deg, rgba(25,122,255,1) 0%, rgba(0,64,152,1) 100%);
+    z-index:2;
+    animation:anmt2 1s linear infinite;
+    transform:translateX(290px);
+    animation-delay:1s;
+}
+a span:nth-child(4){
+    position:absolute;
+    width:5px;
+    height:100%;
+    bottom:0;
+    left:0;
+    display:block;
+    background: rgb(25,122,255);
+    background: linear-gradient(180deg, rgba(25,122,255,1) 0%, rgba(0,64,152,1) 100%);
+    z-index:2;
+    animation:anmt3 1s linear infinite;
+    transform:translateY(100px);
+}
+a span:nth-child(5){
+    position:absolute;
+    width:5px;
+    height:100%;
+    bottom:0;
+    right:0;
+    display:block;
+    background: rgb(25,122,255);
+    background: linear-gradient(180deg, rgba(0,64,152,1) 0%, rgba(25,122,255,1) 100%);
+    z-index:2;
+    animation:anmt4 1s linear infinite;
+    transform:translateY(-100px);
+}
+
+
+
+@keyframes anmt4{
+    from{
+         transform:translateY(-100px);
+    }
+    to{
+        transform:translateY(250px);
+    }
+}
+@keyframes anmt3{
+    from{
+         transform:translateY(100px);
+    }
+    to{
+        transform:translateY(-250px);
+    }
+}
+@keyframes anmt2{
+    from{
+         transform:translateX(290px);
+    }
+    to{
+        transform:translateX(-290px);
+    }
+}
+@keyframes anmt1{
+    from{
+         transform:translateX(-290px);
+    }
+    to{
+        transform:translateX(290px);
+    }
+}
